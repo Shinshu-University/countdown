@@ -42,9 +42,7 @@
 
     //指定の日時を過ぎていたら処理をしない
     if(remainTime < 0) {
-      document.getElementById("countdown-hour").remove();
-      document.getElementById("countdown-min").remove();
-      document.getElementById("countdown-sec").remove();
+      document.getElementById("countdown").remove();
       document.getElementById("header").remove();
       document.getElementByClassName("finish-").setAttribute("finish");
     }
@@ -62,16 +60,14 @@
     //指定の日時になればカウントを止める
     if(remainTime < 0) {
       clearInterval(countdown)
-      document.getElementById("countdown-hour").remove();
-      document.getElementById("countdown-min").remove();
-      document.getElementById("countdown-sec").remove();
+      document.getElementById("countdown").remove();
       document.getElementById("header").remove();
       document.getElementByClassName("finish-").setAttribute("finish");
     }
 }, 1000)
     </script>
     <p style="text-align: center;" id="header">夏休み前最後の下校(7/19 16:00)まで</p>
-    <div class="finish-">夏休みだぁぁぁ！</div>
+    <div class="finish">夏休みだぁぁぁ！</div>
     <div id="countdownArea" class="countdown">
       <!-- <span id="countdown-day"></span>時間 -->
       <span id="countdown-hour"></span>：<span id="countdown-min"></span>：<span id="countdown-sec"></span>
